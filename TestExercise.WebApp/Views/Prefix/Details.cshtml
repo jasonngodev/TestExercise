@@ -1,0 +1,30 @@
+﻿@model TestExercise.ViewModels.Catalogs.PrefixNumbersVm
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Prefix number</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Operator
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Operator.ProviderName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PrefixNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrefixNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PrefixId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

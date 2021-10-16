@@ -1,0 +1,24 @@
+﻿@model TestExercise.ViewModels.Catalogs.BeautyNumberVm
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Last nice pair of numbers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Numbers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numbers)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

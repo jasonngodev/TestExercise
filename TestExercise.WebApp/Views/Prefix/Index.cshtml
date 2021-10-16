@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TestExercise.ViewModels.Catalogs.PrefixNumbersVm>
+
+<h1>Prefix number</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.PrefixId)</td>
+            <th>
+                Operator
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrefixNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.PrefixId)</td>
+            <td>@Html.DisplayFor(modelItem => item.Operator.ProviderName)</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrefixNumber)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PrefixId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PrefixId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PrefixId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
